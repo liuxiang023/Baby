@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RelativeLayout
+        android:background="#FF5D5E"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <ImageView 
+            android:src="@drawable/zoujiantou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="育儿笔记"
+            android:textColor="#84FFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textColor="#84FFFF"
+            android:text="编辑" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/wenzihuiyi"
+            android:gravity="center"
+            android:text="文字回忆" />
+
+        <TextView
+            android:id="@+id/diy_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/diy"
+            android:gravity="center"
+            android:text="个性DIY回忆" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/xiangcehuiyi"
+            android:gravity="center"
+            android:text="相册回忆" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#C6C6C6" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="111dp"
+            android:layout_height="143dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:src="@drawable/mei" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="65dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="111dp"
+            android:layout_height="143dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:src="@drawable/mei" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="65dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="#C6C6C6" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90dp" >
+
+        <Button
+            android:id="@+id/tianjiatupian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/yuan_baocun"
+            android:text="添加图片" 
+            android:textColor="#84FFFF"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" 
+        android:background="#efefef"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/shouye"
+            android:gravity="center"
+            android:text="首页" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/yuer"
+            android:gravity="center"
+            android:text="育儿笔记" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/touxiang"
+            android:gravity="center"
+            android:text="我的" />
+    </LinearLayout>
+    
+
+</LinearLayout>
