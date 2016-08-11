@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_launcher"
+        />
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="昵称"
+        android:textColor="#0000ff"
+        android:gravity="center_vertical"/>
+     <TextView
+         android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+       android:layout_weight="1"
+        android:text="7个月宝宝可以长期坐吗"
+        android:textColor="#0000ff"
+          android:gravity="center_vertical"/>
+      <TextView
+          android:id="@+id/tv_answer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="别把你的女人不当回事，总有一天，会有另外一个男人过来，感激你不懂得她的好。"
+        android:textColor="#0000ff"
+        android:gravity="center_vertical"/>
+</LinearLayout>
+</LinearLayout>
