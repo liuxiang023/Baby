@@ -1,4 +1,4 @@
-package com.example.yueryoudao;
+package com.example.baby;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,44 +20,37 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class Activity_wenzijiyi extends Activity {
+public class Note_Fragment extends Fragment {
 	private ImageButton btn,btn3,btn4;
 	private Button btn2;
 	private ListView list;
 	private List<Map<String,Object>> Data;
-
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_wenzijiyi);
-		btn=(ImageButton)findViewById(R.id.btn_wenzihuiyi);
-		btn2=(Button)findViewById(R.id.btn_addtext);
-		btn3=(ImageButton)findViewById(R.id.btn_diyhuiyi);
-		btn4=(ImageButton)findViewById(R.id.btn_xiangce);
-		list=(ListView)findViewById(R.layout.listview_mian);
-		MyBaseAdapter adapter=new MyBaseAdapter(this,Data);
-		/*list.setAdapter(adapter);
-		String[] text =new String[]{"textview","textview2","textview3","textview4","textview5","textview6","textview7","textview8","textview9"};
-		int[] itemid=new int[]{R.id.textview_title,R.id.btn_wenzihuiyi,R.id.btn_diyhuiyi,R.id.btn_wenzihuiyi,R.id.textview_contain,R.id.textview_contain2,R.id.textview_contain3,
-				R.id.text,R.id.text2,R.id.textview_bottom1,R.id.textview_bottom2,R.id.textview_bottom3};
-		Data=getData();*/
-		btn2.setOnClickListener(onClickListener);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+	{
+		View view=inflater.inflate(R.layout.activity_wenzijiyi, null);
+	
+	btn=(ImageButton)view.findViewById(R.id.btn_wenzihuiyi);
+	btn3=(ImageButton)view.findViewById(R.id.btn_diyhuiyi);
+	btn4=(ImageButton)view.findViewById(R.id.btn_xiangce);
+		btn.setOnClickListener(onClickListener);
 		btn3.setOnClickListener(onClickListener);
 		btn4.setOnClickListener(onClickListener);
+		return view;
 		
-	}
+	};
 	private List< Map<String, Object>> getData() {
 		List<Map<String,Object>> lists=new ArrayList<Map<String,Object>>();
 		Map<String,Object> map=new HashMap<String,Object>();
-		map.put("textview", "育儿笔记");
-		map.put("textview2", "文字回忆");
-		map.put("textview3", "个性DIY回忆");
-		map.put("textview4", "相册回忆");
-		map.put("textview5", "还没有添加任何文字回忆");
-		map.put("textview6", "点击下方添加吧！");
-		map.put("textview7", "首页");
-		map.put("textview8", "育儿笔记");
-		map.put("textview9", "我的");
+		map.put("textview", "鑲插効绗旇");
+		map.put("textview2", "鏂囧瓧鍥炲繂");
+		map.put("textview3", "涓�IY鍥炲繂");
+		map.put("textview4", "鐩稿唽鍥炲繂");
+		map.put("textview5", "杩樻病鏈夋坊鍔犱换浣曟枃瀛楀洖蹇�");
+		map.put("textview6", "鐐瑰嚮涓嬫柟娣诲姞鍚э紒");
+		map.put("textview7", "棣栭〉");
+		map.put("textview8", "鑲插効绗旇");
+		map.put("textview9", "鎴戠殑");
 		
 		lists.add(map);
 		return lists;
@@ -100,19 +94,14 @@ public class Activity_wenzijiyi extends Activity {
 				holder.textview3=(TextView)convertView.findViewById(R.id.textview_contain2);
 				holder.textview4=(TextView)convertView.findViewById(R.id.textview_contain3);
 				holder.textview5=(TextView)convertView.findViewById(R.id.text);
-				holder.textview6=(TextView)convertView.findViewById(R.id.text2);
-				holder.textview7=(TextView)convertView.findViewById(R.id.textview_bottom1);
-				holder.textview8=(TextView)convertView.findViewById(R.id.textview_bottom2);
-				holder.textview9=(TextView)convertView.findViewById(R.id.textview_bottom3);
+
 				holder.button=(Button)convertView.findViewById(R.id.btn_edit);
 				holder.button=(Button)convertView.findViewById(R.id.btn_addtext);
 				holder.btn=(ImageButton)convertView.findViewById(R.id.btn_back);
 				holder.btn2=(ImageButton)convertView.findViewById(R.id.btn_wenzihuiyi);
 				holder.btn3=(ImageButton)convertView.findViewById(R.id.btn_diyhuiyi);
 				holder.btn4=(ImageButton)convertView.findViewById(R.id.btn_xiangce);
-				holder.btn5=(ImageButton)convertView.findViewById(R.id.btn_shouye);
-				holder.btn6=(ImageButton)convertView.findViewById(R.id.btn_yuerbiji);
-				holder.btn7=(ImageButton)convertView.findViewById(R.id.btn_mine);
+		
 				convertView.setTag(holder);
 			}
 			holder =(ViewHolder)convertView.getTag();
@@ -154,17 +143,18 @@ public class Activity_wenzijiyi extends Activity {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			switch(v.getId()){
-			case R.id.btn_addtext:
-				Intent intent =new Intent( Activity_wenzijiyi.this,Activity_fabiaojiyi.class);
+			switch(v.getId())
+			{
+			case R.id.btn_wenzihuiyi:
+				Intent intent =new Intent( getActivity(),Activity_fabiaojiyi.class);
 				startActivity(intent);
 				break;
 			case R.id.btn_diyhuiyi:
-				Intent intent2 =new Intent( Activity_wenzijiyi.this,Activity_xiangcehuiyi.class);	
+				Intent intent2 =new Intent( getActivity(),Activity_xiangcehuiyi.class);	
 				startActivity(intent2);
 				break;
 			case R.id.btn_xiangce:
-				Intent intent3 =new Intent( Activity_wenzijiyi.this,Activity_gexingdiy.class);	
+				Intent intent3 =new Intent(getActivity(),Activity_gexingdiy.class);	
 				startActivity(intent3);
 			}
 		}

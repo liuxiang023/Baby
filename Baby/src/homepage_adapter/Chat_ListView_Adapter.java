@@ -2,10 +2,7 @@ package homepage_adapter;
 
 import java.util.ArrayList;
 
-import com.example.method.R;
-
 import android.content.Context;
-import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +10,14 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.baby.R;
+
 public class Chat_ListView_Adapter extends BaseAdapter{
 LayoutInflater inflater;
-ArrayList<Integer> chat_icon; //附近热聊的图片
-ArrayList<String> chat_title;    //附近热聊的标题
-ArrayList<String> chat_question; //附近热聊的问题
-ArrayList<String> chat_answer;  //附近热聊的回答
+ArrayList<Integer> chat_icon; //闄勮繎鐑亰鐨勫浘鐗�
+ArrayList<String> chat_title;    //闄勮繎鐑亰鐨勬爣棰�
+ArrayList<String> chat_question; //闄勮繎鐑亰鐨勯棶棰�
+ArrayList<String> chat_answer;  //闄勮繎鐑亰鐨勫洖绛�
 public Chat_ListView_Adapter(Context context,ArrayList<Integer> chat_icon,ArrayList<String> chat_title,
 		ArrayList<String> chat_question,ArrayList<String> chat_answer)
 {

@@ -1,21 +1,17 @@
 package homepage_adapter;
 
 
-import java.util.ArrayList;
-
-import com.example.method.R;
-
 import android.content.Context;
 import android.database.DataSetObserver;
-import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.baby.R;
 public class MyExpandableListAdapter implements ExpandableListAdapter{
     LayoutInflater inflater;
     Data data;

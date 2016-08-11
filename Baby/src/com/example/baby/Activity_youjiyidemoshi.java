@@ -1,4 +1,4 @@
-package com.example.yueryoudao;
+package com.example.baby;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -23,7 +23,7 @@ OnClickListener onClickListener=new OnClickListener() {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		Intent intent=new Intent(Activity_youjiyidemoshi.this,Activity_wenzijiyi.class);
+		Intent intent=new Intent(Activity_youjiyidemoshi.this,Note_Fragment.class);
 		startActivity(intent);
 	}
 

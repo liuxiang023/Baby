@@ -2,27 +2,25 @@ package homepage_adapter;
 
 import java.util.ArrayList;
 
-
-
-
-import com.example.method.R;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-public class Assistant_Adapter extends BaseAdapter{
-	 ArrayList<Integer> icon;
-     ArrayList<Integer> bg;
+import com.example.baby.R;
+
+public class GridView_Adapter extends BaseAdapter{
+	 ArrayList<String> label;
+     ArrayList<Integer> icon;
      LayoutInflater inflater;
-     public Assistant_Adapter(LayoutInflater inflater,ArrayList<Integer> icon,ArrayList<Integer> bg) {
+public GridView_Adapter(LayoutInflater inflater,ArrayList<Integer> icon, ArrayList<String> label)
+{
+	this.icon=icon;
+	this.label=label;
 	this.inflater=inflater;
-    this.icon=icon;
-    this.bg=bg;
-	}
-     
+}
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
@@ -43,10 +41,11 @@ public class Assistant_Adapter extends BaseAdapter{
 
 	@Override
 	public View getView(int position, View convertview, ViewGroup arg2) {
-		convertview=inflater.inflate(R.layout.homepage_baby_asistant, null);
-		ImageView iv=(ImageView)convertview.findViewById(R.id.iv);
-		iv.setImageResource(icon.get(position));
-		convertview.setBackgroundColor(bg.get(position));
+		convertview=inflater.inflate(R.layout.gridview_layout, null);
+		ImageView iv=(ImageView) convertview.findViewById(R.id.iv);
+	    TextView tv=(TextView)convertview.findViewById(R.id.tv);
+	   iv.setImageResource(icon.get(position));
+	   tv.setText(label.get(position));
 		return convertview;
 	}
 

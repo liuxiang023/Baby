@@ -6,10 +6,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.method.Homepage_Fragment;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
@@ -31,6 +34,7 @@ public class GuanFangActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.guanfangtuijian_layout);
 		listview=(ListView)findViewById(R.id.tuijian_listview);
 		imageButton=(ImageButton)findViewById(R.id.back_button);
@@ -52,24 +56,24 @@ public class GuanFangActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			Intent intent=new Intent(GuanFangActivity.this,LiaoTianActivity.class);
+			Intent intent=new Intent(GuanFangActivity.this,MainActivity.class);
 			startActivity(intent);
 		}};
 	public void getData(){
 		Map<String,Object> map=new HashMap<String,Object>();
 		map.put("image", R.id.listview_image);
-		map.put("text1", "1ËêÒÔÉÏ±¦±¦°²È«×¢ÒâÊÂÏî´óÈ«");
-		map.put("text2", "ÄÜ¹»Õ¾ÆğÀ´ºó£¬ÄãµÄ±¦±¦ÖÜÎ§¾Í³ÉÎªÁËÒ»¸öÈ«ĞÂµÄ¿ÉÒÔÌ½Ë÷µÄÊÀ½ç¡ª¡ª×ÀÃæ¡¢Êé¼Ü¡¢³éÌëºÍÆäËû´ÓÇ°¹»²»µ½µÄµØ·½.....");
+		map.put("text1", "1å²ä»¥ä¸Šå®å®å®‰å…¨æ³¨æ„äº‹é¡¹å¤§å…¨");
+		map.put("text2", "èƒ½å¤Ÿç«™èµ·æ¥åï¼Œä½ çš„å®å®å‘¨å›´å°±æˆä¸ºäº†ä¸€ä¸ªå…¨æ–°çš„å¯ä»¥æ¢ç´¢çš„ä¸–ç•Œâ€”æ¡Œé¢ã€ä¹¦æ¶ã€æŠ½å±‰ç›’å…¶ä»–ä»å‰å¤Ÿä¸åˆ°çš„åœ°æ–¹......");
 		listData.add(map);
 		map=new HashMap<String,Object>();
 		map.put("image",R.id.listview_image);
-		map.put("text1", "°ëËêÒÔºóµÄ±¦±¦ÎªÊ²Ã´ÈİÒ×Éú²¡");
-		map.put("text2", "²»ÉÙÂèÂè¶¼ÓĞÕâÑùµÄÀ§»ó£º°ëËêÒÔÇ°£¬º¢×ÓÉíÌåÌØ±ğ½¡¿µ£¬ºÜÉÙ¸ĞÃ°¡¢·¢Ôï£¬¿ÉÊÇ¹ıÁË°ëËê£¬·¢ÉÕ¡¢¿ÈËÔ¡¢´òÅçÌçµÈĞ¡²¡²»¶Ï¡£  ×¨¼Ò½âÊÍËµ£¬°ëËêÒÔÇ°£¬º¢×ÓÔÚÌ¥¶ùÆÚ´ÓÄ¸Ìå»ñµÃµÄÃâÒß¿¹Ìå»¹ÔÚ.....");
+		map.put("text1", "åŠå²ä»¥åçš„å®å®ä¸ºä»€ä¹ˆå®¹æ˜“ç”Ÿç—…");
+		map.put("text2", "ä¸å°‘å¦ˆå¦ˆéƒ½æœ‰è¿™æ ·çš„å›°æƒ‘ï¼šåŠå²ä»¥å‰ï¼Œå­©å­èº«ä½“ç‰¹åˆ«å¥åº·ï¼Œå¾ˆå°‘æ„Ÿå†’ã€å‘çƒ§ï¼Œå¯æ˜¯è¿‡äº†åŠå²ï¼Œå‘çƒ§ã€å’³å—½ã€æ‰“å–·åšç­‰å°ç—…ä¸æ–­ã€‚ ä¸“å®¶è§£é‡Šè¯´ï¼ŒåŠå²ä»¥å‰ï¼Œå­©å­åœ¨èƒå„¿æœŸä»æ¯ä½“ä¸­è·å¾—çš„å…ç–«æŠ—ä½“è¿˜åœ¨.....");
 		listData.add(map);
 		map=new HashMap<String,Object>();
 		map.put("image", R.id.listview_image);
-		map.put("text1", "1ËêÒÔÉÏ±¦±¦°²È«×¢ÒâÊÂÏî´óÈ«");
-		map.put("text2", "ÄÜ¹»Õ¾ÆğÀ´ºó£¬ÄãµÄ±¦±¦ÖÜÎ§¾Í³ÉÎªÁËÒ»¸öÈ«ĞÂµÄ¿ÉÒÔÌ½Ë÷µÄÊÀ½ç¡ª¡ª×ÀÃæ¡¢Êé¼Ü¡¢³éÌëºÍÆäËû´ÓÇ°¹»²»µ½µÄµØ·½.....");
+		map.put("text1", "1å²ä»¥ä¸Šå®å®å®‰å…¨æ³¨æ„äº‹é¡¹å¤§å…¨");
+		map.put("text2", "èƒ½å¤Ÿç«™èµ·æ¥åï¼Œä½ çš„å®å®å‘¨å›´å°±æˆä¸ºäº†ä¸€ä¸ªå…¨æ–°çš„å¯ä»¥æ¢ç´¢çš„ä¸–ç•Œâ€”æ¡Œé¢ã€ä¹¦æ¶ã€æŠ½å±‰ç›’å…¶ä»–ä»å‰å¤Ÿä¸åˆ°çš„åœ°æ–¹......");
 		listData.add(map);
 	}
 }

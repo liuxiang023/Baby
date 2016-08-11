@@ -1,4 +1,4 @@
-package com.example.yueryoudao;
+package com.example.baby;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,14 +14,14 @@ protected void onCreate(Bundle savedInstanceState) {
 	// TODO Auto-generated method stub
 	super.onCreate(savedInstanceState);
 	setContentView(R.layout.activity_xiangcehuiyi);
-	btn.setOnClickListener(clickListener);
+	//btn.setOnClickListener(clickListener);
 }
 OnClickListener clickListener=new OnClickListener() {
 	
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		Intent intent=new Intent(Activity_xiangcehuiyi.this,Activity_wenzijiyi.class);
+		Intent intent=new Intent(Activity_xiangcehuiyi.this,Note_Fragment.class);
 		startActivity(intent);
 	}
 };

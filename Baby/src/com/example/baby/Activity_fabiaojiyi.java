@@ -1,4 +1,4 @@
-package com.example.yueryoudao;
+package com.example.baby;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,10 +14,10 @@ public class Activity_fabiaojiyi extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fabiaojiyi);
-		btn=(Button)findViewById(R.id.btn_save);
+	/*	btn=(Button)findViewById(R.id.btn_save);
 		btn2=(Button)findViewById(R.id.btn_back);
 		btn.setOnClickListener(onClickListener);
-		btn2.setOnClickListener(onClickListener);
+		btn2.setOnClickListener(onClickListener);*/
 		
 	}
 	OnClickListener onClickListener=new OnClickListener() {
@@ -31,7 +31,7 @@ public class Activity_fabiaojiyi extends Activity {
 			startActivity(intent);
 			break;
 			case R.id.btn_back:
-				Intent intent2 =new Intent( Activity_fabiaojiyi.this,Activity_wenzijiyi.class);
+				Intent intent2 =new Intent( Activity_fabiaojiyi.this,Note_Fragment.class);
 				startActivity(intent2);
 				break;
 				default:
