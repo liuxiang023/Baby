@@ -31,8 +31,8 @@ OnClickListener l =new OnClickListener() {
 		// TODO Auto-generated method stub
 		switch (v.getId()){
 		case R.id .diy_1:
-			Intent intent=new Intent(Tiao_yemiao_xf.this,Xiangcehuiyi_Activity.class);
-			startActivity(intent);
+			//Intent intent=new Intent(Tiao_yemiao_xf.this,Xiangcehuiyi_Activity.class);
+			//sstartActivity(intent);
 			break;
 		case R.id.tianjiatupian:
 			/*
