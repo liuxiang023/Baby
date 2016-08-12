@@ -13,24 +13,41 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.baby.SearchActivity" >
+        </activity>
+        <activity android:name="PersonalMessage" >
+        </activity>
         <activity
-            android:name="com.example.baby.Xiangcehuiyi_Activity"
-            android:label="@string/app_name" 
-            android:launchMode="singleTask">
+            android:name=".LiaoTianActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name=".TalkingAboutActivity" >
+        </activity>
+        <activity android:name="com.example.baby.Activity_fabiaojiyi" >
+        </activity>
+        <activity android:name="com.example.baby.Activity_gexingdiy" >
+        </activity>
+        <activity android:name="com.example.baby.Activity_xiangcehuiyi" >
+        </activity>
+        <activity android:name="com.example.baby.Activity_youjiyidemoshi" >
+        </activity>
+        <activity android:name="com.example.baby.Text_shouye" >
+        </activity>
+        <activity android:name="com.example.baby.Tiao_yemiao_xf" >
+        </activity>
+        <activity android:name="com.example.baby.Xiangcehuiyi_Activity" >
+        </activity>
+        <activity android:name="com.example.baby.Zhuye_xf" >
+        </activity>
+        <activity android:name=".GuanFangActivity" >
+        </activity>
+        <activity android:name="com.example.baby.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".LiaoTianActivity" >
-        </activity>
-         <activity   android:name="com.example.baby.Tiao_yemiao_xf"
-             
-             ></activity>
-        <activity android:name="com.example.baby.Text_shouye"></activity>
-        <activity android:name="com.example.baby.Zhuye_xf"></activity>
-        <activity android:name=".TalkingAboutActivity" >
         </activity>
     </application>
 

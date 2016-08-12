@@ -10,7 +10,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -22,12 +24,14 @@ public class TalkingAboutActivity extends Activity{
 	TextView textview_nicheng;
 	TextView textview_pinglun;
 	TextView textview_date;
+	ImageButton backbutton;
 	ArrayAdapter arrayAdapter;
 	SimpleAdapter simpleAdapter;
 	List<String> lists=new ArrayList<String>();
 	List<Map<String,Object>> listData=new ArrayList<Map<String,Object>>();
 	protected void onCreate(Bundle bundle){
 		super.onCreate(bundle);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.talkingabout_layout);
 		listview=(ListView)findViewById(R.id.taolun_listview);
 		imageview_touxiang=(ImageView)findViewById(R.id.touxiang_imageview);
@@ -39,57 +43,59 @@ public class TalkingAboutActivity extends Activity{
 		int[] viewIds={R.id.touxiang_imageview,R.id.name_textview,R.id.talk_textview,R.id.time_textview};
 		simpleAdapter=new SimpleAdapter(TalkingAboutActivity.this,listData,R.layout.talkingabout_listview_layout,keys,viewIds);
 		listview.setAdapter(simpleAdapter);
+		backbutton=(ImageButton)findViewById(R.id.back_button);
+		backbutton.setOnClickListener(clickListener);
 		getData();
-	}
+	};
 	OnClickListener clickListener=new OnClickListener(){
 
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			Intent intent=new Intent(TalkingAboutActivity.this,GuanFangActivity.class);
+			Intent intent=new Intent(TalkingAboutActivity.this,MainActivity.class);
 			startActivity(intent);
 		}};
 		public void getData(){
 			Map<String,Object> map=new HashMap<String,Object>();
 			map.put("imageview_touxiang", R.drawable.touxiang_one);
 			map.put("textview_nicheng", "paxoap");
-			map.put("textview_pinglun", "ËµËµÄãÃÇÁ©¿Ú×ÓµÄ¿ÚÎ¶ÊÇ·ñÏàÍ¬");
+			map.put("textview_pinglun", "è¯´è¯´ä½ ä»¬ä¿©å£å­çš„å£å‘³æ˜¯å¦ç›¸åŒ");
 			map.put("textview_data", "2016/05/06");
 			listData.add(map);
 			map=new HashMap<String,Object>();
 			map.put("imageview_touxiang", R.drawable.touxiang_two);
 			map.put("textview_nicheng", "paxoap");
-			map.put("textview_pinglun", "ÓêÓêĞÀ±¦±¦µÄ´©ÒÂ´îÅä");
+			map.put("textview_pinglun", "é›¨é›¨æ¬£å®å®çš„ç©¿è¡£æ­é…");
 			map.put("textview_data", "2016/05/06");
 			listData.add(map);
 			map=new HashMap<String,Object>();
 			map.put("imageview_touxiang", R.drawable.touxiang_three);
 			map.put("textview_nicheng", "paxoap");
-			map.put("textview_pinglun", "¿´¼ûÄãÀÏ¹«ÊÖ»úÀïÓĞ»ÉÆ¬£¬Äã»áÉúÆøÃ´£¿");
+			map.put("textview_pinglun", "çœ‹è§ä½ è€å…¬æ‰‹æœºé‡Œæœ‰é»„ç‰‡ï¼Œä½ ä¼šç”Ÿæ°”ä¹ˆï¼Ÿ");
 			map.put("textview_data", "2016/05/06");
 			listData.add(map);
 			map=new HashMap<String,Object>();
 			map.put("imageview_touxiang", R.drawable.touxiang_four);
 			map.put("textview_nicheng", "paxoap");
-			map.put("textview_pinglun", "±ğºöÊÓ¡°»°ÉÙÓÖ¹ÔÇÉ¡±µÄº¢×Ó");
+			map.put("textview_pinglun", "åˆ«å¿½è§†â€œè¯å°‘åˆä¹–å·§çš„å­©å­â€");
 			map.put("textview_data", "2016/05/06");
 			listData.add(map);
 			map=new HashMap<String,Object>();
 			map.put("imageview_touxiang", R.drawable.touxiang_five);
 			map.put("textview_nicheng", "paxoap");
-			map.put("textview_pinglun", "±¦±¦ÀÏÍÂÄÌ");
+			map.put("textview_pinglun", "å®å®è€åå¥¶");
 			map.put("textview_data", "2016/05/06");
 			listData.add(map);
 			map=new HashMap<String,Object>();
 			map.put("imageview_touxiang",R.drawable.touxiang_six);
 			map.put("textview_nicheng", "paxoap");
-			map.put("textview_pinglun", "ÇóÍÆ¼öÒ»¿î²»Ò×ÉÏ»ğµÄÄÌ·Û3¶ÎµÄ");
+			map.put("textview_pinglun", "æ±‚æ¨èä¸€æ¬¾ä¸æ˜“ä¸Šç«çš„å¥¶ç²‰3æ®µçš„");
 			map.put("textview_data", "2016/05/06");
 			listData.add(map);
 			map=new HashMap<String,Object>();
 			map.put("imageview_touxiang", R.drawable.touxiang_seven);
 			map.put("textview_nicheng", "paxoap");
-			map.put("textview_pinglun", "¼±¼±¼±¼±¼±¼±¼±£¬±¦±¦À­µÄÊºÓĞ¿ÅÁ£ÊÇ²»ÊÇÏû»¯²»Á¼£¿ĞèÒªÔõÃ´°ì£¿");
+			map.put("textview_pinglun", "æ€¥æ€¥æ€¥æ€¥æ€¥æ€¥ï¼Œå®å®æ‹‰çš„å±æœ‰é¢—ç²’æ˜¯ä¸æ˜¯æ¶ˆåŒ–ä¸è‰¯ï¼Ÿéœ€è¦æ€ä¹ˆåŠï¼Ÿ");
 			map.put("textview_data", "2016/05/06");
 			listData.add(map);
 		}

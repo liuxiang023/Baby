@@ -39,11 +39,13 @@
                 android:paddingTop="25dp" >
 
                 <ImageView
+                    android:id="@+id/user_image_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/user_image_login_yuli"
                     android:scaleType="centerInside"
-                    android:src="@drawable/user_none_image" />
+                    android:src="@drawable/user_none_image" 
+                    android:clickable="true"/>
 
                 <TextView
                     android:layout_width="wrap_content"
