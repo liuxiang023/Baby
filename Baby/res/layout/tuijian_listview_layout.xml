@@ -6,7 +6,7 @@
     <ImageView
         android:id="@+id/listview_image"
         android:layout_width="fill_parent"
-        android:layout_height="76.7dp"
+        android:layout_height="115dp"
         android:background="@drawable/baby_one"
         />
     <TextView

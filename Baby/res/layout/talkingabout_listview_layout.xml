@@ -5,11 +5,11 @@
     android:orientation="horizontal" >
     <ImageView
         android:id="@+id/touxiang_imageview"
-        android:layout_width="41.4dp"
-        android:layout_height="41.4dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginBottom="13dp"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="11.8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="12dp"
         android:background="#ff11ff"/>
 	<LinearLayout
 	    android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:text="paxoap"
-	    android:layout_marginTop="14.9dp"
+	    android:layout_marginTop="4dp"
 	    android:textSize="12.9sp"
 	    android:textColor="#bebebe"/>
 	<TextView
@@ -29,7 +29,7 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:text="说说你两口子的口味是否相同"
-	    android:layout_marginTop="9.3dp"
+	    android:layout_marginTop="6dp"
 	    android:textSize="10.2sp"
 	    android:textColor="#3f3f3f"/>
 	</LinearLayout>

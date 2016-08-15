@@ -15,27 +15,29 @@
         android:background="#ff5d5e"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
-        android:padding="3.2dp"/>
+        android:padding="5dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="热门讨论"
         android:textColor="#ffffff"
         android:layout_centerInParent="true"
-        android:textSize="20dp"/>
+        android:textSize="16sp"/>
     </RelativeLayout>
-    <ImageView
+	<ImageView
         android:layout_width="match_parent"
-        android:layout_height="40.5dp"
+        android:layout_height="54dp"
         android:background="@drawable/guanggao"
-        />      
+        />
     <ListView
         android:id="@+id/taolun_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:dividerHeight="2dp"
         android:divider="#d3d3d3"
-        android:fastScrollEnabled="true"
-        />
+        android:dividerHeight="1dp"
+        android:fastScrollEnabled="true" >
+    </ListView>
+
+    
 
 </LinearLayout>

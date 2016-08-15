@@ -15,20 +15,20 @@
         android:background="#ff5d5e"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="20dp"
-        android:padding="3.2dp"/>
+        android:padding="5dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="官方推荐"
         android:textColor="#ffffff"
         android:layout_centerInParent="true"
-        android:textSize="20dp"/>
+        android:textSize="17sp"/>
     </RelativeLayout>
     <ListView
         android:id="@+id/tuijian_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:dividerHeight="30.7dp"
+        android:dividerHeight="22.5dp"
         android:divider="#F3F3F3"
         android:fastScrollEnabled="true"
         />
